@@ -1,4 +1,4 @@
-const db = require("express");
+const express = require("express");
 
 const db = require("../models/resource-model");
 
