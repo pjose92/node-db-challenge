@@ -16,10 +16,11 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+    // example data: { name: required, description: optional, completed: boolean }
     const projectData = req.body;
     db.add(projectData)
-        .then((project) => res.status(201).json(project))
-        .catch((err) => res.status(500).json(err));
-});
+      .then((project) => res.status(201).json(project))
+      .catch((err) => res.status(500).json(err));
+  });
 
 module.exports = router;
